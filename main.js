@@ -1298,7 +1298,8 @@ function updateAll() {
         <li>Geodude: Bite</li>
     </ul><br>
     <img src="img/rt4.png" alt="rock tunnel 4"><br><br>
-    <li><u>Elixir now on Repel menu if you haven't before.</u></li><br>
+    <li><u>Elixir now on Repel menu if you haven't before.</u></li>
+    <li>Red tiles are where you bike and green tiles are where you run.<li><br>
     <li><h3>Jr Trainer Sofia</h3></li>
     <ul>
         <li>Jigglypuff: <span class="torrent">Water Gun</span>/Water Pulse</li>
