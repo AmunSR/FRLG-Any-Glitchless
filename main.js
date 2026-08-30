@@ -22,6 +22,9 @@ const xshopping = document.querySelector("#xshopping");
 document.querySelectorAll('input[name="moonoptional"]').forEach(radio => {
     radio.addEventListener('change', updateAll);
 });
+document.querySelectorAll('input[name="version"]').forEach(radio => {
+    radio.addEventListener('change', updateAll);
+});
 
 document.querySelector('#ctch').addEventListener('change', updateAll);
 document.querySelector('#speevs').addEventListener('input', updateAll);
@@ -41,6 +44,8 @@ function updateAll() {
     let evs = parseFloat(speevs.value);
     let checkedRadio = document.querySelector('input[name="moonoptional"]:checked');
     let optional = checkedRadio ? checkedRadio.value : "josh";
+    let checkedVersion = document.querySelector('input[name="version"]:checked');
+    let version = checkedVersion ? checkedVersion.value : "lg";
 
 
     // if (nature === "modest") {
@@ -165,8 +170,6 @@ function updateAll() {
         </ul>`;
         }
     }
-
-
 
     const pewter = document.querySelector("#pewter");
     let liam = '';
@@ -303,6 +306,34 @@ function updateAll() {
             </ul>
         </ul>
     </ul>`;
+
+    const pewtershop = document.querySelector("#pewtershop");
+    if (version === "fr" && slave === "rat" || version === "fr" && slave === "both"){
+        pewtershop.innerHTML = `
+        <ul>
+        <li>Buy:</li>
+        <ul>
+            <li>7x Potion (↓)</li>
+            <li>3x Antidote (↓)</li>
+            <li>3x Paralyze Heal (↓)</li>
+            <li>3x Awakening (↓)</li>
+            <li>3x Repel (↓↓↓)</li>
+        </ul>
+    </ul>
+        `
+    } else {
+        pewtershop.innerHTML = `
+        <ul>
+        <li>Buy:</li>
+        <ul>
+            <li>8x Potion (↓)</li>
+            <li>3x Antidote (↓)</li>
+            <li>3x Awakening (↓↓)</li>
+            <li>3x Repel (↓↓↓)</li>
+        </ul>
+    </ul>
+        `
+    }
 
     const r3 = document.querySelector("#r3");
     let r3spa = '';
@@ -516,9 +547,9 @@ function updateAll() {
         voltorbt2 = '4(5)';
     }
 
-    if (slave === "rat"){
-        paras = '<li><b>FireRed</b>: Catch a Paras right before you exit Mt. Moon.</li><img src="img/paras.png" alt="paras">';
-    } else if (slave === "both"){
+    if (version === "fr" && slave === "rat"){
+        paras = '<li>Catch a Paras right before you exit Mt. Moon.</li><img src="img/paras.png" alt="paras">';
+    } else if (version === "fr" && slave === "both"){
         paras = '<li><b>FireRed</b>: If you havent caught Nidoran before, catch a Paras right before you exit Mt. Moon.</li><img src="img/paras.png" alt="paras">';
     }
 
@@ -604,8 +635,8 @@ function updateAll() {
     const sandshrew = document.querySelector("#sandshrew")
     let shrew = '';
 
-    if (slave === "both" || slave === "rat"){
-        shrew = '<li><b>LeafGreen</b>: If you have no Cut slave, catch a Sandshrew/Rattata in the grass (Tackle to weaken).</li><ul><li>Can teach Strength to Sandshrew later if caught.</li><li>If you died, using a Rare Candy will revive Wartortle.</li></ul>';
+    if (version === "lg" && slave === "both" || version === "lg" && slave === "rat"){
+        shrew = '<li>If you have no Cut slave, catch a Sandshrew/Rattata in the grass (Tackle to weaken).</li><ul><li>Can teach Strength to Sandshrew later if caught.</li><li>If you died, using a Rare Candy will revive Wartortle.</li></ul>';
     }
 
     sandshrew.innerHTML = `
@@ -815,7 +846,7 @@ function updateAll() {
     `
 
     const mart = document.querySelector("#mart");
-    if (slave === "rat" || slave === "both"){
+    if (version === "fr" && slave === "rat" || version === "fr" && slave === "both"){
         mart.innerHTML = `<li>Skip Paralyze Heal if on Paras shopping route.</li><li>Can buy an extra Super Potion here if on Paras shopping route.</li>`
     }
 
@@ -1120,7 +1151,7 @@ function updateAll() {
             raichuqa2 = "(11)12-13(14)";
         }
     }
-    
+
     if (optional !== "josh"){
         if (spe < 25){
             speedtiepika = `${spe} Slower`
@@ -1138,7 +1169,7 @@ function updateAll() {
             speedtiepika = `${spe} Speedties`
         }
     }
-    
+
     if (optional !== "josh"){
         if (spe < 28){
             speedtievolt = `${spe} Slower`
@@ -1299,7 +1330,7 @@ function updateAll() {
     </ul><br>
     <img src="img/rt4.png" alt="rock tunnel 4"><br><br>
     <li><u>Elixir now on Repel menu if you haven't before.</u></li>
-    <li>Red tiles are where you bike and green tiles are where you run.<li><br>
+    <li>Red tiles are where you bike and green tiles are where you run.</li><br>
     <li><h3>Jr Trainer Sofia</h3></li>
     <ul>
         <li>Jigglypuff: <span class="torrent">Water Gun</span>/Water Pulse</li>
@@ -1462,7 +1493,7 @@ function updateAll() {
             <li>Zubat: Water Pulse</li>
         </ul><br>
         <li><u>Grab the Black Glasses before heading downstairs.</u></li><br>
-        <li><u>Grab this Max Ether if low on Mega Kick PP.</u></li>
+        <li><u>Consider this Max Ether if low on Mega Kick PP.</u></li>
         <img src="img/mether.png" alt="max ether">
         <li><h3>Rocket Grunt (Lift Key Guy)</h3></li>
         <ul>
@@ -1514,7 +1545,7 @@ function updateAll() {
         radio.addEventListener('change', updateAll);
     });
 
-    let shoppingroute = document.querySelector('input[name="shopping"]:checked').value;
+    let shoppingroute = document.querySelector('input[name="shopping"]:checked').value ?? "default";
     let xspeed = '';
     let xspecial = '';
 
@@ -1546,7 +1577,7 @@ function updateAll() {
             xspecial = "19";
         }
 
-        if (slave === "rat" || slave === "both"){
+        if (version === "fr" && slave === "rat" || version === "fr" && slave === "both"){
             xshopping.innerHTML = `
         <li>1x X Attack</li>
         <li>${xspeed}x X Speed (↓↓)</li>
@@ -1938,7 +1969,7 @@ function updateAll() {
     carbos.innerHTML=`
     <u>${carbo}</u>
     `
-        carbosblaine.innerHTML=`
+    carbosblaine.innerHTML=`
         ${carboblaine}
         <li>Use Escape Rope.</li>
         `
@@ -3213,6 +3244,7 @@ function updateAll() {
     autoFormat(r1);
     autoFormat(viridian);
     autoFormat(pewter);
+    autoFormat(pewtershop);
     autoFormat(r3);
     autoFormat(mtmoon);
     autoFormat(sandshrew);
