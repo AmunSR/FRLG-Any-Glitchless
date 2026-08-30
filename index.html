@@ -25,8 +25,9 @@
     <h2>Legacy content</h2>
     <p>Inspiration for these notes from <a href="https://frlg-speedruns.netlify.app/routes/any-squirtle/">here</a>.</p>
     <p>This guide follows <a href="https://docs.google.com/document/u/0/d/1tBOEP3BJKO0vwRtarRoL_AVQ8NIqpmrmh4wTTdneSKc/mobilebasic"> WR's notes</a> with some additional stuff.</p>
-    <p><a href="https://docs.google.com/document/d/1pgrfEiNUoO4p8ZDHm1OuC9Y2Uq_Y-Gx5/edit">Thunder's notes</a> (you won't have access).</p>
-    <p><a href="https://docs.google.com/spreadsheets/d/1zNtXl0dtD99EMK9dRTpPzYeSdmvayhaO7_gTl2VXzhM/edit?gid=23887254#gid=23887254">HP sheet</a> (also no access).</p>
+    <p><a href="https://docs.google.com/document/d/1pgrfEiNUoO4p8ZDHm1OuC9Y2Uq_Y-Gx5/edit">Thunder's notes</a> (with Bang's additions).</p>
+    <p><a href="https://docs.google.com/spreadsheets/d/1zNtXl0dtD99EMK9dRTpPzYeSdmvayhaO7_gTl2VXzhM/edit?gid=23887254#gid=23887254">HP sheet</a> (you won't have access).</p>
+    <p>Must read <a href="https://pastebin.com/LvwVhGSk">this</a> to better understand these notes.</p>
     <p><a href="https://github.com/AmunSR/FRLG-Glitchless">Github page</a>.</p>
     <hr>
 </header>
@@ -65,6 +66,13 @@
                 </section></li>
         </ul>
     </ul>
+    <section>
+        <label>Select your game version:</label><br>
+        <input type="radio" id="fr" name="version" value="fr">
+        <label for="fr">FireRed</label><br>
+        <input type="radio" id="lg" name="version" value="lg" checked>
+        <label for="lg">LeafGreen</label><br>
+    </section>
     <h2>Route 1</h2>
     <section id="r1">
 
@@ -78,7 +86,7 @@
     <option value="both">Both</option>
 </select><br>
     <label for="speevs">Speed EVs: </label><input type="number" id="speevs" value="2" min="-3" max="5"><br>
-</select>
+    </select>
     <section id="viridian">
 
     </section>
@@ -86,24 +94,9 @@
     <section id="pewter">
 
     </section>
-    <ul>
-        <li>Buy:</li>
-        <ul>
-            <li>8x Potion (↓)</li>
-            <li>3x Antidote (↓)</li>
-            <li>3x Awakening (↓↓)</li>
-            <li>3x Repel (↓↓↓)</li>
-        </ul>
-        <br>
-        <li>Buy if you need Paras (FireRed only):</li>
-        <ul>
-            <li>7x Potion (↓)</li>
-            <li>3x Antidote (↓)</li>
-            <li>3x Paralyze Heal (↓)</li>
-            <li>3x Awakening (↓)</li>
-            <li>3x Repel (↓↓↓)</li>
-        </ul>
-    </ul>
+    <section id="pewtershop">
+
+    </section>
     <h2>Route 3</h2>
     <section id="r3">
 
@@ -321,7 +314,7 @@
     </ul>
     <h2>Celadon City</h2>
     <ul id="hideout">
-        
+
     </ul>
     <ul>
         <li><label>Select your shopping route:</label></li>
@@ -377,7 +370,7 @@
         <img src="img/crcandy.png" alt="cycling road candy"> <img src="img/crmaxelixir.png" alt="max elixir"><br><br>
         <li>Demount and mount bike on this tile.</li>
         <img src="img/safari%20bike.png" alt="safari demount"><br><br>
-        <li>Use Super Repel before the grass in the second area (two up on menu).</li><br>
+        <li>Use Super Repel before the grass in the second area (↑↑).</li><br>
         <li>Grab this Full Restore and optionally this hidden Revive for safety.</li>
         <img src="img/safari%20full%20restore.png" alt="safari full resotre"> <img src="img/revive.png" alt="revive"><br><br>
         <li>Fly to Fuchsia and head to the Gym (cursor is on Bag menu).</li>
@@ -413,9 +406,9 @@
         <li>Grab this hidden Elixir and TM14 before grabbing the Secret Key on the table.</li>
         <img src="img/mansionelixir.png" alt="mansion elixir"> <img src="img/blizz.png" alt="blizz"><br><br>
         <li>Menu:</li>
-            <ul id="carbosblaine">
+        <ul id="carbosblaine">
 
-            </ul><br>
+        </ul><br>
         <li>Puzzle answers are <b>A, B, B, B, A, B.</b></li><br>
         <li><h3>Blaine</h3></li>
         <ul id="blaine">
@@ -513,9 +506,9 @@
             <li>Lapras: Bite x3</li>
             <ul><li id="kurwa"></li></ul>
         </ul><br>
-<!--        <ul id="brunostrats">-->
+        <!--        <ul id="brunostrats">-->
 
-<!--        </ul>-->
+        <!--        </ul>-->
         <li id="highmid"></li>
         <li><h3>Bruno</h3></li>
         <ul id="bruno">
@@ -542,7 +535,7 @@
 
 </main>
 <br>GG :)
-<footer><h6>Last updated: 11/08/2026</h6></footer>
+<footer><h6>Last updated: 30/08/2026</h6></footer>
 
 <script src="main.js"></script>
 </body>
