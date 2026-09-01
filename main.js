@@ -1814,9 +1814,9 @@ function updateAll() {
     </ul>
     <li><h3>Rocket Grunt</h3></li>
     <ul>
-        <li>Zubat: <span class="torrent">Bite</span></li>
-        <li>Zubat: <span class="torrent">Bite</span></li>
-        <li>Rattata: <span class="torrent">Bite</span></li>
+        <li>Zubat: Bite</li>
+        <li>Zubat: Bite</li>
+        <li>Rattata: Bite</li>
         <li>Raticate: <span class="torrent">Water Gun</span>/Water Pulse</li>
     <ul>
         <li>(!) Quick Attack damage: ${ratqa4}</li>
